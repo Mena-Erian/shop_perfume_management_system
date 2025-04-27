@@ -149,6 +149,12 @@ export const routes: Routes = [
         title: 'Perfumes | Profile',
       },
       {
+        path: 'about',
+        loadComponent: () =>
+          import('./pos/about/about.component').then((c) => c.AboutComponent),
+        title: 'Perfumes | About',
+      },
+      {
         path: 'checkout',
         loadComponent: () =>
           import('./pos/checkout/checkout.component').then(
