@@ -1,7 +1,9 @@
 <app-navbar />
+@if (authServer.isWorker()) {
 <app-sidebar />
-<div class="p-1 sm:ml-60">
-  <div class="p-4 pr-3 pb-0 mt-14">
+}
+<div class="p-1" [ngClass]="{ 'sm:ml-60': authServer.isWorker() }">
+  <div class="p-3 pb-0 mt-14" [ngClass]="{ 'pr-3': authServer.isWorker() }">
     <div
       class="min-h-[80dvh] flex items-center justify-center mb-4 rounded-sm bg-gray-50 dark:bg-gray-800"
     >

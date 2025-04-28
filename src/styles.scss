@@ -3,11 +3,12 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @plugin "tailwindcss-primeui";
+@custom-variant dark (&:where(.my-app-dark, .my-app-dark *)); //dark mode configuration
 @theme {
-	--color-primary: #0064fe;
-	--color-background-start: #fdfbf9;
-	--color-background-end: #f8f5ef;
-	--color-text-primary: #1f2937;
-	--color-text-secondary: #4b5563;
-	--color-hover-bg: #f3f4f6;
+  --color-primary: #0064fe;
+  --color-background-start: #fdfbf9;
+  --color-background-end: #f8f5ef;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-hover-bg: #f3f4f6;
 }

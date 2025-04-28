@@ -2,9 +2,17 @@ import { Routes } from '@angular/router';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { PosLayoutComponent } from './layout/pos-layout/pos-layout.component';
 import { BackofficeLayoutComponent } from './layout/backoffice-layout/backoffice-layout.component';
-
+import { AuthService } from './core/services/auth/auth.service';
+import { inject } from '@angular/core';
 export const routes: Routes = [
-  { path: '', redirectTo: 'pos', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: () => {
+      const authService = inject(AuthService);
+      return authService.isWorker() ? 'backoffice' : 'pos';
+    },
+    pathMatch: 'full',
+  },
   {
     path: 'auth',
     component: AuthLayoutComponent,
@@ -13,7 +21,7 @@ export const routes: Routes = [
       {
         path: 'signin',
         loadComponent: () =>
-          import('./core/auth/signin/signin.component').then(
+          import('./core/components/auth/signin/signin.component').then(
             (c) => c.SigninComponent
           ),
         title: 'Perfumes | Sign In',
@@ -21,7 +29,7 @@ export const routes: Routes = [
       {
         path: 'signout',
         loadComponent: () =>
-          import('./core/auth/signout/signout.component').then(
+          import('./core/components/auth/signout/signout.component').then(
             (c) => c.SignoutComponent
           ),
         title: 'Perfumes | Sign Out',
@@ -29,9 +37,9 @@ export const routes: Routes = [
       {
         path: 'forget-password',
         loadComponent: () =>
-          import('./core/auth/forget-password/forget-password.component').then(
-            (c) => c.ForgetPasswordComponent
-          ),
+          import(
+            './core/components/auth/forget-password/forget-password.component'
+          ).then((c) => c.ForgetPasswordComponent),
         title: 'Perfumes | Forget Password',
       },
     ],
@@ -64,6 +72,14 @@ export const routes: Routes = [
             (c) => c.CashierComponent
           ),
         title: 'Perfumes | Cashier',
+      },
+      {
+        path: 'customers',
+        loadComponent: () =>
+          import('./backoffice/customers/customers.component').then(
+            (c) => c.CustomersComponent
+          ),
+        title: 'Perfumes | Customers',
       },
       {
         path: 'products',

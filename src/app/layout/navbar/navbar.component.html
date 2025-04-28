@@ -5,6 +5,7 @@
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
         <!-- sidebar button -->
+        @if (authService.isWorker()) {
         <button
           data-drawer-target="logo-sidebar"
           data-drawer-toggle="logo-sidebar"
@@ -26,6 +27,8 @@
             ></path>
           </svg>
         </button>
+        }
+
         <a
           class="flex items-center space-x-3 rtl:space-x-reverse border rounded-full py-1 px-2.5 bg-white/50 shadow-sm"
         >
@@ -47,7 +50,7 @@
             >
               <li>
                 <a
-                  routerLink="home"
+                  routerLink="/pos/home"
                   routerLinkActive="active-link"
                   class="block py-2 px-3 text-text-primary rounded-sm text-center hover:bg-hover-bg md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
                   aria-current="page"
@@ -56,7 +59,7 @@
               </li>
               <li>
                 <a
-                  routerLink="about"
+                  routerLink="/pos/about"
                   routerLinkActive="active-link"
                   class="block py-2 capitalize px-3 text-text-primary rounded-sm text-center hover:bg-hover-bg md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
                   >about</a
@@ -64,7 +67,7 @@
               </li>
               <li>
                 <a
-                  routerLink="cart"
+                  routerLink="/pos/cart"
                   routerLinkActive="active-link"
                   class="block py-2 px-3 text-text-primary rounded-sm text-center hover:bg-hover-bg md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
                   >Cart</a
@@ -72,7 +75,7 @@
               </li>
               <li>
                 <a
-                  routerLink="make-your-perfume"
+                  routerLink="/pos/make-your-perfume"
                   routerLinkActive="active-link"
                   class="block py-2 capitalize px-3 text-text-primary rounded-sm text-center hover:bg-hover-bg md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
                   >Make Your Perfume</a
