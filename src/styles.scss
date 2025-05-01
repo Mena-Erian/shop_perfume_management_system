@@ -3,7 +3,11 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @plugin "tailwindcss-primeui";
-@custom-variant dark (&:where(.my-app-dark, .my-app-dark *)); //dark mode configuration
+@import "./../node_modules/primeicons/primeicons.css";
+// @import "./../node_modules/primeng/basecomponent/style/basecomponentstyle.d.ts";
+
+@custom-variant dark (&:where(.dark, .dark *)); //dark mode configuration
+
 @theme {
   --color-primary: #0064fe;
   --color-background-start: #fdfbf9;
