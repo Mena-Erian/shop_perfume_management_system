@@ -8,37 +8,44 @@ export class DarkModeService {
   checkPlatformService = inject(CheckPlatformService);
   // renderer2 = inject(Renderer2);
 
-  constructor() {}
+  constructor() {
+    console.log('dark mode service work');
+  }
   key: string = 'darkMode';
+
   //enable and disable
   /**
    * cheack for dark in local storage
    * put or take the dark class from html Element
    * check platform before use localstorage
    */
-  enableDarkMode() {
+  enableDarkMode(): boolean {
     const el = document.documentElement;
     if (this.checkPlatformService.isBrowser()) {
       localStorage.setItem(this.key, 'enable');
-
       document.documentElement.classList.add('dark');
+      console.log(localStorage.getItem(this.key));
     }
+    return true;
   }
-  disableDarkMode() {
+  disableDarkMode(): boolean {
     const el = document.documentElement;
     if (this.checkPlatformService.isBrowser()) {
       localStorage.setItem(this.key, 'disable');
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('dark');
+      console.log(localStorage.getItem(this.key));
     }
+    return false;
   }
   isDark(): boolean {
     if (this.checkPlatformService.isBrowser()) {
-      if (localStorage.getItem(this.key) === 'dark') {
-        return true;
+      if (localStorage.getItem(this.key) === 'enable') {
+        return this.enableDarkMode();
       } else {
-        return false;
+        return this.disableDarkMode();
       }
+    } else {
+      return this.enableDarkMode();
     }
-    return false;
   }
 }

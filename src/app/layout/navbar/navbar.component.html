@@ -3,12 +3,16 @@
 >
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
-      <div class="flex items-center justify-start rtl:justify-end">
+      <div class="flex items-center gap-x-2.5 justify-start rtl:justify-end">
         <!-- sidebar button -->
         @if (authService.isWorker()) {
         <button
-          data-drawer-target="logo-sidebar"
-          data-drawer-toggle="logo-sidebar"
+          [attr.data-drawer-target]="
+            authService.isWorker() ? 'logo-sidebar' : null
+          "
+          [attr.data-drawer-toggle]="
+            authService.isWorker() ? 'logo-sidebar' : null
+          "
           type="button"
           class="inline-flex items-center p-2 me-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         >
@@ -27,6 +31,15 @@
             ></path>
           </svg>
         </button>
+        }@else {
+        <p-togglebutton
+          [(ngModel)]="isDarkMode"
+          onLabel="Light"
+          offLabel="Dark"
+          size="small"
+          styleClass="w-16 "
+          (click)="toggleDarkMode()"
+        />
         }
 
         <a
@@ -37,18 +50,6 @@
             >perfumes</span
           >
         </a>
-
-        <!-- <p-toggleswitch [(ngModel)]="isDarkMode" />
-        <div class="card flex justify-center">
-          <p-multiselect
-            [options]="cities"
-            [(ngModel)]="selectedCities"
-            optionLabel="name"
-            placeholder="Select Cities"
-            [maxSelectedLabels]="3"
-            styleClass="w-full md:w-80"
-          />
-        </div> -->
       </div>
       <div class="flex items-center">
         <div class="flex items-center ms-3">
@@ -153,6 +154,7 @@
           </svg>
           <!-- cart icon -->
           <svg
+            routerLink="/pos/cart"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 80 80"
             xml:space="preserve"
