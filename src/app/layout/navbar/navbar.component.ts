@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
   constructor(private cd: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.isDarkMode = this.darkModeService.isDark();
-    console.log(this.isDarkMode, this.darkModeService.isDark());
+    // console.log(this.isDarkMode, this.darkModeService.isDark());
   }
   toggleDarkMode() {
     if (this.isDarkMode) {

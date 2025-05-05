@@ -8,9 +8,6 @@ export class DarkModeService {
   checkPlatformService = inject(CheckPlatformService);
   // renderer2 = inject(Renderer2);
 
-  constructor() {
-    console.log('dark mode service work');
-  }
   key: string = 'darkMode';
 
   //enable and disable
@@ -24,7 +21,7 @@ export class DarkModeService {
     if (this.checkPlatformService.isBrowser()) {
       localStorage.setItem(this.key, 'enable');
       document.documentElement.classList.add('dark');
-      console.log(localStorage.getItem(this.key));
+      // console.log(localStorage.getItem(this.key));
     }
     return true;
   }
@@ -33,7 +30,7 @@ export class DarkModeService {
     if (this.checkPlatformService.isBrowser()) {
       localStorage.setItem(this.key, 'disable');
       document.documentElement.classList.remove('dark');
-      console.log(localStorage.getItem(this.key));
+      // console.log(localStorage.getItem(this.key));
     }
     return false;
   }

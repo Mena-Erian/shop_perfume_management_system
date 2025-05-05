@@ -17,8 +17,9 @@ enum Role {
 })
 export class AuthService {
   constructor() {}
-  UserRole: WritableSignal<Role> = signal<Role>(Role.admin);
+  UserRole: WritableSignal<Role> = signal<Role>(Role.employee);
   isWorker: Signal<boolean> = computed(
     () => this.UserRole() === Role.employee || this.UserRole() === Role.admin
   );
+  isAdmin: Signal<boolean> = computed(() => this.UserRole() === Role.admin);
 }

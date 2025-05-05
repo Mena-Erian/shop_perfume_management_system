@@ -4,6 +4,8 @@ import { PosLayoutComponent } from './layout/pos-layout/pos-layout.component';
 import { BackofficeLayoutComponent } from './layout/backoffice-layout/backoffice-layout.component';
 import { AuthService } from './core/services/auth/auth.service';
 import { inject } from '@angular/core';
+import { isWorkerGuard } from './core/guards/isWorker/is-worker.guard';
+import { isAdminGuard } from './core/guards/isAdmin/is-admin.guard';
 export const routes: Routes = [
   {
     path: '',
@@ -47,6 +49,8 @@ export const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeLayoutComponent,
+    canActivate: [isWorkerGuard],
+
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
@@ -103,6 +107,8 @@ export const routes: Routes = [
           import('./backoffice/employees/employees.component').then(
             (c) => c.EmployeesComponent
           ),
+        canActivate: [isAdminGuard],
+
         title: 'Perfumes | Employees',
       },
       {
@@ -111,6 +117,8 @@ export const routes: Routes = [
           import('./backoffice/reports/reports.component').then(
             (c) => c.ReportsComponent
           ),
+        canActivate: [isAdminGuard],
+
         title: 'Perfumes | Reports',
       },
       {
@@ -119,6 +127,7 @@ export const routes: Routes = [
           import('./backoffice/settings/settings.component').then(
             (c) => c.SettingsComponent
           ),
+        canActivate: [isAdminGuard],
         title: 'Perfumes | Settings',
       },
     ],

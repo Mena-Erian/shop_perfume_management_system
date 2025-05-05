@@ -1,0 +1,18 @@
+.router-link-active {
+  color: #fff; /* Simplified white text color */
+  background: #007bff; /* Blue background */
+  font-weight: 600; /* Slightly lighter bold for elegance */
+  border-left: 4px solid #0056b3; /* Highlight with a left border */
+  padding: 10px; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners */
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease; /* Faster and scoped transitions */
+}
+
+a {
+  transition: color 0.25s ease, background 0.25s ease; /* Faster and scoped hover effect */
+}
+
+a:hover {
+  color: #fff; /* White text on hover */
+  background: #0056b3; /* Darker blue background on hover */
+}
