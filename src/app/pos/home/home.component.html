@@ -1,4 +1,28 @@
-<p class="bg-green-500">home works!</p>
-<div class="card flex justify-center">
-  <p-button label="Check" />
+<div class="card">
+  <p-carousel
+    [value]="products"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="3000"
+  >
+    <ng-template let-product #item>
+      <div class="relative mx-auto">
+        <img
+          [src]="'./images/' + product?.image"
+          [alt]="product?.name ? product?.name : 'Product image'"
+          class="w-full rounded-border"
+        />
+
+        <p-tag
+          [value]="product.inventoryStatus"
+          [severity]="getSeverity(product.inventoryStatus)"
+          class="absolute"
+          styleClass="dark:!bg-surface-900"
+          [ngStyle]="{ 'left.px': 5, 'top.px': 5 }"
+        />
+      </div>
+    </ng-template>
+  </p-carousel>
 </div>
