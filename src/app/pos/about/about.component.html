@@ -1,1 +1,366 @@
-<p>about works!</p>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "rose-gradient": "#e91e63",
+          "purple-gradient": "#9c27b0",
+        },
+      },
+    },
+  };
+</script>
+<div class="bg-gray-50 dark:bg-gray-900">
+  <!-- Hero Section -->
+  <section
+    class="bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 text-white py-20"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1
+        class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent"
+      >
+        About Perfumes
+      </h1>
+      <p
+        class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed"
+      >
+        Crafting exquisite fragrances that capture the essence of elegance and
+        sophistication since our founding.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            Our Story
+          </h2>
+          <p
+            class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed"
+          >
+            Founded with a passion for creating unforgettable scents, Perfumes
+            has been at the forefront of fragrance innovation for over two
+            decades. Our journey began with a simple belief: every person
+            deserves a signature scent that reflects their unique personality
+            and style.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            From our state-of-the-art laboratories to our carefully curated
+            collection, we combine traditional perfumery techniques with modern
+            innovation to create fragrances that tell a story, evoke emotions,
+            and create lasting memories.
+          </p>
+          <div class="mt-8">
+            <div class="flex items-center space-x-4 mb-4">
+              <div
+                class="w-12 h-12 bg-pink-100 dark:bg-pink-900 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-pink-600 dark:text-pink-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Premium Quality
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Only the finest ingredients sourced globally
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-600 dark:text-purple-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Crafted with Love
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Every bottle is a work of art and passion
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="bg-gradient-to-br from-pink-200 to-purple-200 dark:from-pink-800 dark:to-purple-800 rounded-2xl p-8 h-96 flex items-center justify-center"
+          >
+            <div class="text-center">
+              <div
+                class="w-24 h-32 bg-gradient-to-b from-pink-400 to-rose-600 rounded-full mx-auto mb-4 relative"
+              >
+                <div
+                  class="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-pink-600 rounded-full opacity-80"
+                ></div>
+                <div
+                  class="absolute top-8 right-2 w-6 h-6 bg-green-400 rounded-full opacity-70"
+                ></div>
+                <div
+                  class="absolute bottom-8 left-2 w-4 h-4 bg-yellow-400 rounded-full opacity-60"
+                ></div>
+              </div>
+              <p class="text-gray-700 dark:text-gray-300 font-medium">
+                Signature Fragrance
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div class="text-3xl font-bold text-pink-600 dark:text-pink-400 mb-2">
+            20+
+          </div>
+          <div class="text-gray-600 dark:text-gray-300">Years Experience</div>
+        </div>
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div
+            class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2"
+          >
+            500+
+          </div>
+          <div class="text-gray-600 dark:text-gray-300">Unique Fragrances</div>
+        </div>
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div class="text-3xl font-bold text-rose-600 dark:text-rose-400 mb-2">
+            50K+
+          </div>
+          <div class="text-gray-600 dark:text-gray-300">Happy Customers</div>
+        </div>
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+          <div
+            class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+          >
+            25+
+          </div>
+          <div class="text-gray-600 dark:text-gray-300">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our Mission & Values
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          We believe in creating fragrances that inspire confidence, evoke
+          memories, and celebrate individuality.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center group">
+          <div
+            class="bg-gradient-to-br from-pink-100 to-rose-100 dark:from-pink-900 dark:to-rose-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+          >
+            <svg
+              class="w-10 h-10 text-pink-600 dark:text-pink-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"
+              />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+            Innovation
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Constantly pushing boundaries to create revolutionary scents that
+            captivate and inspire.
+          </p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900 dark:to-indigo-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+          >
+            <svg
+              class="w-10 h-10 text-purple-600 dark:text-purple-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+            Quality
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Uncompromising commitment to using only the finest ingredients and
+            craftsmanship.
+          </p>
+        </div>
+        <div class="text-center group">
+          <div
+            class="bg-gradient-to-br from-rose-100 to-pink-100 dark:from-rose-900 dark:to-pink-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+          >
+            <svg
+              class="w-10 h-10 text-rose-600 dark:text-rose-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+            Community
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Building lasting relationships with our customers and celebrating
+            their unique stories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Meet Our Team
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          The passionate artisans behind our exceptional fragrances
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div
+            class="w-24 h-24 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full mx-auto mb-4 flex items-center justify-center"
+          >
+            <span class="text-white text-2xl font-bold">SA</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            Sarah Anderson
+          </h3>
+          <p class="text-pink-600 dark:text-pink-400 mb-3">Master Perfumer</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            With over 15 years of experience, Sarah crafts our signature scents
+            with unparalleled expertise.
+          </p>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div
+            class="w-24 h-24 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full mx-auto mb-4 flex items-center justify-center"
+          >
+            <span class="text-white text-2xl font-bold">MJ</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            Michael Johnson
+          </h3>
+          <p class="text-purple-600 dark:text-purple-400 mb-3">
+            Creative Director
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Michael leads our creative vision, ensuring every fragrance tells a
+            compelling story.
+          </p>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div
+            class="w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center"
+          >
+            <span class="text-white text-2xl font-bold">EL</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            Emily Lee
+          </h3>
+          <p class="text-rose-600 dark:text-rose-400 mb-3">Quality Manager</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Emily ensures every bottle meets our exacting standards of quality
+            and excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section
+    class="py-16 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-6">
+        Ready to Find Your Signature Scent?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Discover our exclusive collection or create your own custom fragrance.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+        >
+          Explore Collections
+        </button>
+        <button
+          class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition-colors duration-300"
+        >
+          Make Your Perfume
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
